@@ -30,3 +30,7 @@ COMMIT
 
 Delete file after a mean time
     find /path/to/files* -mtime +5 -exec rm {} \;
+
+
+# regist docker-in-docker runner
+sudo gitlab-runner register -n --url http://git.gmf.io/ --registration-token gbUQ-7mYFSb7KcD1X953 --executor docker --description “docker-in-docker” --docker-image "docker:latest" --docker-privileged --docker-volumes /var/run/docker.sock:/var/run/docker.sock
